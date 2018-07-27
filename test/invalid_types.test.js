@@ -29,7 +29,7 @@ test('invalid types', function(assert) {
 });
 
 test('valid types', function(assert) {
-	var types = ['integer', 'number', 'string', 'boolean', 'object', 'array'];
+	var types = ['integer', 'number', 'string', 'boolean', 'object', 'array', 'null'];
 
 	assert.plan(types.length);
 

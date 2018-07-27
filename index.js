@@ -128,7 +128,7 @@ function convertProperties(properties, options) {
 }
 
 function validateType(type) {
-	var validTypes = ['integer', 'number', 'string', 'boolean', 'object', 'array'];
+	var validTypes = ['integer', 'number', 'string', 'boolean', 'object', 'array', 'null'];
 
 	if (validTypes.indexOf(type) < 0 && type !== undefined) {
 		throw new InvalidTypeError('Type "' + type + '" is not a valid type');
