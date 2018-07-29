@@ -50,3 +50,22 @@ test('valid types', function(assert) {
 		assert.deepEqual(result, expected, type + ' ok');
 	});
 });
+
+test('array types', function(assert) {
+	assert.plan(1);
+
+	var schema, result, expected;
+
+	schema = {
+		type: ['string', 'integer'],
+	};
+
+	result = convert(schema);
+
+	expected = {
+		$schema: 'http://json-schema.org/draft-04/schema#',
+		type: ['string', 'integer'],
+	};
+
+	assert.deepEqual(result, expected, 'array types ok');
+});

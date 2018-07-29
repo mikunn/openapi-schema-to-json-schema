@@ -129,6 +129,10 @@ function convertProperties(properties, options) {
 }
 
 function validateType(type) {
+	if (Array.isArray(type)) {
+		return type.forEach(validateType);
+	}
+
 	var validTypes = ['integer', 'number', 'string', 'boolean', 'object', 'array'];
 
 	if (validTypes.indexOf(type) < 0 && type !== undefined) {
