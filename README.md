@@ -76,7 +76,7 @@ If set to `false`, converts the provided schema in place. If `true`, clones the 
 #### `dateToDateTime` (boolean)
 
 This is `false` by default and leaves `date` format as is. If set to `true`, sets `format: 'date'` to `format: 'date-time'`.
-  
+
 For example
 
 ```js
@@ -90,7 +90,7 @@ var convertedSchema = toJsonSchema(schema, {dateToDateTime: true});
 console.log(convertedSchema);
 ```
 
-prints 
+prints
 
 ```js
 {
@@ -102,7 +102,7 @@ prints
 
 #### `keepNotSupported` (array)
 
-By default, the following fields are removed from the result schema: `nullable`, `discriminator`, `readOnly`, `writeOnly`, `xml`, `externalDocs`, `example` and `deprecated` as they are not supported by JSON Schema Draft 4. Provide an array of the ones you want to keep (as strings) and they won't be removed. 
+By default, the following fields are removed from the result schema: `nullable`, `discriminator`, `readOnly`, `writeOnly`, `xml`, `externalDocs`, `example` and `deprecated` as they are not supported by JSON Schema Draft 4. Provide an array of the ones you want to keep (as strings) and they won't be removed.
 
 #### `removeReadOnly` (boolean)
 
@@ -113,7 +113,7 @@ If set to `true`, will remove properties set as `readOnly`. If the property is s
 Similar to `removeReadOnly`, but for `writeOnly` properties.
 
 #### `supportPatternProperties` (boolean)
- 
+
 If set to `true` and `x-patternProperties` property is present, change `x-patternProperties` to `patternProperties` and call `patternPropertiesHandler`. If `patternPropertiesHandler` is not defined, call the default handler. See `patternPropertiesHandler` for more information.
 
 #### `patternPropertiesHandler` (function)
@@ -124,3 +124,6 @@ If the handler is not provided, the default handler is used. If `additionalPrope
 
 See `test/pattern_properties.test.js` for examples how this works.
 
+#### 'deleteExtensionProperties` (boolean)
+
+If set to 'true', it will remove all [OpenAPI Extension Properties](https://swagger.io/specification/#specificationExtensions) from the Schema Object when converting (except `x-patternProperties`).
