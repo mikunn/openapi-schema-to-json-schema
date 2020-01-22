@@ -1,3 +1,5 @@
+**THIS PACKAGE IS NO LONGER MAINTAINED. USE @openapi-contrib/openapi-schema-to-json-schema INSTEAD.**
+
 # OpenAPI Schema to JSON Schema
 
 A little NodeJS package to convert OpenAPI Schema Object or Parameter Object to JSON Schema.
