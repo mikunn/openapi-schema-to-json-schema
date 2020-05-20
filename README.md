@@ -1,6 +1,8 @@
+**THIS PACKAGE IS NO LONGER MAINTAINED. USE @openapi-contrib/openapi-schema-to-json-schema INSTEAD.**
+
 # OpenAPI Schema to JSON Schema
 
-A little NodeJS package to convert OpenAPI Schema Object to JSON Schema.
+A little NodeJS package to convert OpenAPI Schema Object or Parameter Object to JSON Schema.
 
 Currently converts from [OpenAPI 3.0](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) to [JSON Schema Draft 4](http://json-schema.org/specification-links.html#draft-4).
 
@@ -19,6 +21,7 @@ If you need to do the conversion in reverse, checkout [json-schema-to-openapi-sc
 ## Features
 
 * converts OpenAPI 3.0 Schema Object to JSON Schema Draft 4
+* converts OpenAPI 3.0 Parameter Object to JSON Schema Draft 4
 * ~~converts [common named data types](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types) to `type` and `format`~~ *(removed in version 2.0.0)*
   * ~~for example `type: "dateTime"` becomes `type: "string"` with `format: "date-time"`~~
 * deletes `nullable` and adds `"null"` to `type` array if `nullable` is `true`
@@ -34,13 +37,14 @@ If you need to do the conversion in reverse, checkout [json-schema-to-openapi-sc
 npm install --save openapi-schema-to-json-schema
 ```
 
-## Usage
+## Converting OpenAPI schema
 
 Here's a small example to get the idea:
 
 ```js
 
 var toJsonSchema = require('openapi-schema-to-json-schema');
+// OR: toJsonSchema = require('openapi-schema-to-json-schema').fromSchema;
 
 var schema = {
   type: 'string',
