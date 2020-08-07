@@ -1,21 +1,21 @@
 {
-  "name": "openapi-schema-to-json-schema",
-  "version": "2.2.0",
-  "description": "Converts OpenAPI Schema Object to JSON Schema",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/tape test/**/*.test.js | ./node_modules/.bin/tap-spec && npm run lint",
-    "lint": "eslint ."
-  },
-  "repository": "github:mikunn/openapi-schema-to-json-schema",
-  "author": "Mika Kunnas",
-  "license": "MIT",
-  "dependencies": {
-    "deep-equal": "^1.0.1"
-  },
-  "devDependencies": {
-    "eslint": "^5.0.0",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.8.0"
-  }
+	"name": "openapi-schema-to-json-schema",
+	"version": "2.3.0",
+	"description": "Converts OpenAPI Schema Object to JSON Schema",
+	"main": "index.js",
+	"scripts": {
+		"test": "./node_modules/.bin/tape test/**/*.test.js | ./node_modules/.bin/tap-spec && npm run lint",
+		"lint": "eslint ."
+	},
+	"repository": "github:mikunn/openapi-schema-to-json-schema",
+	"author": "Mika Kunnas",
+	"license": "MIT",
+	"dependencies": {
+		"deep-equal": "^1.1.1"
+	},
+	"devDependencies": {
+		"eslint": "^5.0.0",
+		"tap-spec": "^5.0.0",
+		"tape": "^4.8.0"
+	}
 }
